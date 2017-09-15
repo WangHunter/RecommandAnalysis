@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/RecommandAnalysis.iml" filepath="$PROJECT_DIR$/RecommandAnalysis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/recommandData/recommandData.iml" filepath="$PROJECT_DIR$/recommandData/recommandData.iml" />
+      <module fileurl="file://$PROJECT_DIR$/recommandSystem/recommandSystem.iml" filepath="$PROJECT_DIR$/recommandSystem/recommandSystem.iml" />
+    </modules>
+  </component>
+</project>

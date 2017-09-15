@@ -1,0 +1,6 @@
+com\wonder\service\impl\RecommandDataServiceImpl.class
+com\wonder\dao\RecommandDataDao.class
+com\wonder\service\RecommandDataService.class
+com\wonder\service\GetRecommandResultService.class
+com\wonder\dao\impl\RecommandDataDaoImpl.class
+com\wonder\service\impl\GetRecommandResuleImpl.class
