@@ -20,7 +20,7 @@ public class KafkaProducers {
     }
 
     public static void main(String[] args) {
-        String str = "{\"actionType\":\"02\",\"contentId\":\"23544450\",\"newsTag\":\"\",\"nodeId\":\"263910\",\"userId\":\"000005\"}";
+        String str = "{\"actionType\":\"05\",\"contentId\":\"23544450\",\"newsTag\":\"\",\"nodeId\":\"263910\",\"userId\":\"000005\"}";
         sendMsg(str);
     }
 }

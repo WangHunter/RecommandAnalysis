@@ -8,13 +8,11 @@ import redis.clients.jedis.JedisPoolConfig;
  * Created by Administrator on 2017/8/15.
  */
 public class RedisUtil {
-    public static JedisPool jedisPool = null;
+    public static JedisPool jedisPool;
     // Redis服务器IP
     private static String ADDR = ResourcesManager.getProp("redis.cluster.address");
     // Redis的端口号
     private static int PORT = Integer.valueOf(ResourcesManager.getProp("redis.cluster.socket"));
-    // 访问密码
-    private static String AUTH = "";
 
     /**
      * 初始化Redis连接池
@@ -36,7 +34,7 @@ public class RedisUtil {
             config.setMaxWaitMillis(1000 * 100);
             // 在borrow一个jedis实例时，是否提前进行validate操作；如果为true，则得到的jedis实例均是可用的；
             config.setTestOnBorrow(true);
-            jedisPool = new JedisPool(config, ADDR, PORT, 3000);
+            jedisPool = new JedisPool(config, ADDR, PORT, 4000);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -46,18 +44,13 @@ public class RedisUtil {
      *
      * @return
      */
-    public synchronized static Jedis getJedis() {
-        try {
+    public static Jedis getJedis() {
             if (jedisPool != null) {
                 Jedis resource = jedisPool.getResource();
                 return resource;
             } else {
-                return null;
+                return jedisPool.getResource();
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
     }
 
     /**
@@ -65,10 +58,16 @@ public class RedisUtil {
      *
      * @param jedis
      */
-    public static void close(final Jedis jedis) {
+    public static void release(final Jedis jedis) {
         if (jedis != null) {
-            jedis.close();
+            jedisPool.returnResource(jedis);
         }
+    }
+
+
+
+    public static void returnBrokenResource(Jedis jedis){
+        jedisPool.returnBrokenResource(jedis);
     }
     public static void main(String[] args) {
         System.out.println(getJedis());

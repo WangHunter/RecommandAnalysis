@@ -23,7 +23,7 @@ public class GetRecommandResuleImpl implements GetRecommandResultService {
     public String getItemByUserID(String userid) throws JSONException {
         String result = recommandDataDao.resultItem(userid);
         if (null == result || "null".equalsIgnoreCase(result)) {
-            log.info("根据此用户id"+userid+",得不到推荐结果");
+            log.info("根据此用户id:"+userid+",得不到推荐结果");
             result = "null";   //如果获取不到推荐栏目，给默认的栏目
         }
         return result;

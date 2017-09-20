@@ -25,6 +25,8 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.Set;
 
+import static com.wonder.util.RedisUtil.*;
+
 /**
  * Created by Administrator on 2017/9/12.
  */
@@ -37,15 +39,22 @@ public class ToolUtil {
     private static CloseableHttpClient client = HttpClients.createDefault();
     private static String GetScoreUrl = ResourcesManager.getProp("getscore.url");
 
-    private static Jedis jedis = RedisUtil.getJedis();
+//    private static Jedis jedis = getJedis();
+
+/*    @Autowired
+    private RedisUtil redisUtil;
+
+    public Jedis getJedis() {
+        return redisUtil.getJedis();
+    }*/
 
     /**
      * 根据key向db中写入数据
-     *
      * @param key 用户id
      */
     public static void redisInsert2Db(String key) {
         log.info("从redis同步数据到mongodb");
+        Jedis jedis = getJedis();
         Set<Tuple> getKeySet = jedis.zrevrangeWithScores(key, 0, -1);
         Document docInsert = new Document();
         for (Tuple t : getKeySet) {
@@ -56,6 +65,8 @@ public class ToolUtil {
         }
         docInsert.put("userid", key);
         coll.insertOne(docInsert);
+        release(jedis);
+//        jedis.close();
     }
 
     /**
@@ -100,23 +111,25 @@ public class ToolUtil {
 
     /**
      * 同步db数据到redis
-     *
      * @param document
      * @param key
      */
     public static void dbInsert2Redis(Document document, String key) {
+        Jedis jedis = getJedis();
         try {
             JSONObject jsonObj = new JSONObject(document.toJson().toString());
             Iterator it = jsonObj.keys();
             while (it.hasNext()) {
                 String keyJson = (String) it.next();
-                String valueJson = jsonObj.getString(key);
-                if (!"_id".equalsIgnoreCase(keyJson)) {
+                String valueJson = jsonObj.getString(keyJson);
+                if (!"_id".equalsIgnoreCase(keyJson)&&!"userid".equalsIgnoreCase(keyJson)) {
                     jedis.zadd(key, Double.valueOf(valueJson), keyJson);
                 }
             }
+            release(jedis);
         } catch (JSONException e) {
-            log.error(e.getStackTrace());
+            returnBrokenResource(jedis);
+            log.error(e.getMessage());
         }
     }
 
@@ -152,6 +165,7 @@ public class ToolUtil {
      * @return
      */
     public static String getRecommandItem(String key) {
+        Jedis jedis = getJedis();
         String getRecommandItem = null;
         Set sets = jedis.zrevrangeByScore(key, "+inf", "-inf", 0, 2);
         Iterator<String> itSets = sets.iterator();
@@ -162,12 +176,15 @@ public class ToolUtil {
                 break;
             }
         }
+        release(jedis);
+//        jedis.close();
+//        close(jedis);
         return getRecommandItem;
     }
 
 
     /**
-     * 根据sctionType得到操作分数
+     * 根据actionType得到操作分数
      * @param actionType
      * @return
      * @throws IOException

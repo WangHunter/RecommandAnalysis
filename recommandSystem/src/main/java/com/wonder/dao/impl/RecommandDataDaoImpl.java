@@ -16,13 +16,13 @@ public class RecommandDataDaoImpl implements RecommandDataDao {
     private static final org.apache.logging.log4j.Logger log = org.apache.logging.log4j.LogManager.getLogger(RecommandDataDaoImpl.class
             .getName());
 
+
     public void translate2Kafka(String message) {
 //        KafkaProducers.sendMsg(message);
     }
 
 
     public String resultItem(String userid) throws JSONException {
-
         String getItem = null;  //配置默认返回结果，从redis和数据库都得不到结果
         getItem = getRecommandItem(userid);   //先从redis中拿最高得分的栏目，如果没有则从db中得到
         //如果从redis中得不到则从数据库中得到数据
@@ -36,5 +36,4 @@ public class RecommandDataDaoImpl implements RecommandDataDao {
         }
         return getItem;
     }
-
 }
