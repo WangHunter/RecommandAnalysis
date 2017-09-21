@@ -2,7 +2,7 @@
 <Configuration>
     <Appenders>
         <!-- 配置日志输出文件名字     追加读写 -->
-        <RollingFile name="recommendData" fileName="/var/log/recommendData/recommendData.log" filePattern="/var/log/recommendData/recommendData.%d{yyyy-MM-dd}.log" append="true">
+        <RollingFile name="recommendData" fileName="/var/log/recommandData/recommendData.log" filePattern="/var/log/recommendData/recommandData.%d{yyyy-MM-dd}.log" append="true">
             <!-- 输出格式 -->
             <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss,SSS}] [%p] [%c] [%t] %m %ex%n"/>
             <!-- 设置策略 -->

@@ -13,7 +13,7 @@ public class QueryItemIDServletTest {
 
         CloseableHttpClient client = HttpClients.createDefault();
         HttpPost httpPost = new HttpPost(
-                "http://localhost:8080/recommandSystem/getItemId?userid=888");
+                "http://200.200.18.130:8089/recommandSystem/getItemId?userid=888");
         httpPost.setHeader("Accept", "application/json");
         httpPost.setHeader("Content-type", "application/json");
 

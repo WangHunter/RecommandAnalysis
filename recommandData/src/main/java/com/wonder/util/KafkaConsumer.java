@@ -37,8 +37,6 @@ public class KafkaConsumer implements Runnable {
     private static String collName = ResourcesManager.getProp("mongodb.coll");
     private static MongoCollection<Document> coll = MongoDBUtil.instance.getCollection(dbName, collName);
 
-    private static Jedis jedis = RedisUtil.getJedis();
-
     private ConsumerConnector consumer;
     private String topic;
     private int numThreads;
@@ -77,52 +75,35 @@ public class KafkaConsumer implements Runnable {
 
         // 4. 从返回结果中获取对应topic的数据流处理器
         List<KafkaStream<String, String>> streams = consumerMap.get(this.topic);
+
         // 5. 创建线程池
         this.executorPool = Executors.newFixedThreadPool(this.numThreads);
         // 6. 构建数据输出对象
         int threadNumber = 0;
         for (final KafkaStream<String, String> stream : streams) {
-            this.executorPool.submit(new ConsumerKafkaStreamProcesser(stream, threadNumber));
+            this.executorPool.submit(new ConsumerKafkaStreamProcesser(stream,threadNumber));
             threadNumber++;
         }
-    }
 
-    public synchronized  void shutdown() throws InterruptedException {
-        // 1. 关闭和Kafka的连接，这样会导致stream.hashNext返回false
-        if (this.consumer != null) {
-            wait(2000);  //等待offset提交完成关闭consumer
-            this.consumer.shutdown();
-        }
-
-        // 2. 关闭线程池，会等待线程的执行完成
-        if (this.executorPool != null) {
-            // 2.1 关闭线程池
-            this.executorPool.shutdown();
-
-            // 2.2. 等待关闭完成, 等待五秒
-            try {
-                if (!this.executorPool.awaitTermination(5, TimeUnit.SECONDS)) {
-                    System.out.println("Timed out waiting for consumer threads to shut down, exiting uncleanly!!");
-                }
-            } catch (InterruptedException e) {
-                log.error(e.getStackTrace());
-            }
-        }
+//        Iterator<KafkaStream<String, String>> iterator = streams.iterator();
+//        while (iterator.hasNext()){
+//            KafkaStream<String, String> next = iterator.next();
+//            this.executorPool.submit(new ConsumerKafkaStreamProcesser(next, threadNumber));
+//            threadNumber++;
+//        }
 
     }
+
 
     /**
      * 根据传入的zk的连接信息和groupID的值创建对应的ConsumerConfig对象
      *
-     * @param zookeeper zk的连接信息，类似于：<br/>
-     *                  hadoop-senior01.ibeifeng.com:2181,hadoop-senior02.ibeifeng.com:2181/kafka
+     * @param zookeeper zk的连接信息，
      * @param groupId   该kafka consumer所属的group id的值， group id值一样的kafka consumer会进行负载均衡
      * @return Kafka连接信息
      */
     private ConsumerConfig createConsumerConfig(String zookeeper, String groupId) {
-        // 1. 构建属性对象
         Properties prop = new Properties();
-        // 2. 添加相关属性
         prop.put("group.id", groupId); // 指定分组id
         prop.put("zookeeper.connect", zookeeper); // 指定zk的连接url
         prop.put("zookeeper.session.timeout.ms", "400"); //
@@ -145,13 +126,14 @@ public class KafkaConsumer implements Runnable {
         // 线程ID编号
         private int threadNumber;
 
-        public ConsumerKafkaStreamProcesser(KafkaStream<String, String> stream, int threadNumber) {
+        public ConsumerKafkaStreamProcesser(KafkaStream<String, String> stream,int threadNumber) {
             this.stream = stream;
             this.threadNumber = threadNumber;
         }
 
         public void run() {
             log.info("准备读取kafka数据");
+            Jedis jedis = RedisUtil.getJedis();
             // 1. 获取数据迭代器
             ConsumerIterator<String, String> iter = this.stream.iterator();
             // 2. 迭代输出数据
@@ -183,7 +165,7 @@ public class KafkaConsumer implements Runnable {
                         }
                     }
                 } catch (Exception e) {
-                    log.error(e.getStackTrace());
+                    log.error(e.getMessage());
                     continue;
                 }
                 log.info("用户的相关信息:" + key + "," + item + "," + score);
@@ -260,6 +242,31 @@ public class KafkaConsumer implements Runnable {
             // 3. 表示当前线程执行完成
             log.info("Shutdown Thread:" + this.threadNumber);
             jedis.close();
+        }
+
+    }
+
+
+    public synchronized  void shutdown() throws InterruptedException {
+        // 1. 关闭和Kafka的连接，这样会导致stream.hashNext返回false
+        if (this.consumer != null) {
+            wait(2000);  //等待offset提交完成关闭consumer
+            this.consumer.shutdown();
+        }
+
+        // 2. 关闭线程池，会等待线程的执行完成
+        if (this.executorPool != null) {
+            // 2.1 关闭线程池
+            this.executorPool.shutdown();
+
+            // 2.2. 等待关闭完成, 等待五秒
+            try {
+                if (!this.executorPool.awaitTermination(5, TimeUnit.SECONDS)) {
+                    System.out.println("Timed out waiting for consumer threads to shut down, exiting uncleanly!!");
+                }
+            } catch (InterruptedException e) {
+                log.error(e.getStackTrace());
+            }
         }
 
     }
