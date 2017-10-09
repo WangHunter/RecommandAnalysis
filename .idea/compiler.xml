@@ -6,15 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="recommandData" />
-        <module name="recommanddata" />
-        <module name="recommandSystem" />
+        <module name="recommendData" />
+        <module name="recommendSystem" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.7">
-      <module name="RecommandAnalysis" target="1.5" />
-      <module name="recommandData" target="1.7" />
-      <module name="recommandSystem" target="1.7" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="RecommendAnalysis" target="1.5" />
+      <module name="recommendData" target="1.7" />
+      <module name="recommendSystem" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

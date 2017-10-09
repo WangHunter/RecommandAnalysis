@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd
+           http://www.springframework.org/schema/tx
+           http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+    <context:annotation-config/>
+    <context:component-scan base-package="com.wonder"/>
+
+
+    <!-- 用户行为记录-->
+ <!--<bean name="recommandDataServicehttp" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+        <property name="service" ref="recommandDataService"/>
+        <property name="serviceInterface" value="com.wonder.service.RecommandDataService"/>
+    </bean>
+
+    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="/RecommandDataServiceRemoting">recommandDataServicehttp</prop>
+            </props>
+        </property>
+    </bean>-->
+
+    <!-- 根据用户ID获得推荐栏目-->
+    <bean name="getRecommendResultServicehttp" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+        <property name="service" ref="getRecommendResultService"/>
+        <property name="serviceInterface" value="com.wonder.service.GetRecommendResultService"/>
+    </bean>
+
+    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="/GetRecommendResultServiceRemoting">getRecommendResultServicehttp</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>
