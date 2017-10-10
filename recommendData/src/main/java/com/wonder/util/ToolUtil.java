@@ -3,7 +3,6 @@ package com.wonder.util;
 import com.mongodb.BasicDBObject;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.model.Filters;
-import kafka.utils.Utils;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -221,15 +220,4 @@ public class ToolUtil {
         return scores;
     }
 
-    public static void main(String[] args) throws IOException, JSONException {
-//        Document newdoc = new Document();
-//        newdoc.put("item33", String.valueOf("33"));    //更新得分
-//        updateById("userid", "123456789", newdoc);
-
-//        Double oldScore = Double.valueOf("1.5");
-//        System.out.println(oldScore);
-
-        String key = "2001693";
-        System.out.println(Utils.abs(key.hashCode()%3));
-    }
 }

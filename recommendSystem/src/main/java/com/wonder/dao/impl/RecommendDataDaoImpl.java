@@ -39,7 +39,6 @@ public class RecommendDataDaoImpl implements RecommendDataDao {
             }else {
                 getItem = null;
             }
-
         }
         return getItem;
     }

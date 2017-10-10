@@ -99,7 +99,7 @@ public class KafkaConsumer implements Runnable {
         prop.put("zookeeper.session.timeout.ms", "400"); //
         prop.put("zookeeper.sync.time.ms", "200");
         prop.put("auto.commit.interval.ms", "2000");
-        prop.put("consumer.timeout.ms",blocktime);   //阻塞超时
+        prop.put("consumer.timeout.ms", blocktime);   //阻塞超时
 //        prop.put("auto.offset.reset", "smallest");  //更换group后，从topic的开始位置消费所有消息,smallest,largest
         prop.put("auto.commit.enable", "true");   //定期提交offset
         return new ConsumerConfig(prop);
@@ -159,95 +159,100 @@ public class KafkaConsumer implements Runnable {
                     continue;
                 }
                 log.info("用户的相关信息:" + key + "," + item + "," + score);
-                //存在更新数据
-                if (jedis.exists(key)) {
-                    log.info("可以从redis中查到key:" + key);
-                    //存在则更新redis数据，再同步到数据库
-                    jedis.zincrby(key, score, item);   //对item减分
-                    double oldScoreByRedis = jedis.zscore(key,item);
-                    if(oldScoreByRedis<=0){
-                        oldScoreByRedis =0;
-                        jedis.zadd(key,oldScoreByRedis,item);    //保证最低减分至为0分
-                    }
+
+                String[] itemSplit = item.split(",");
+                for (int i = 0; i < itemSplit.length; i++) {
+                    item = itemSplit[i];
+                    //存在更新数据
+                    if (jedis.exists(key)) {
+                        log.info("可以从redis中查到key:" + key);
+                        //存在则更新redis数据，再同步到数据库
+                        jedis.zincrby(key, score, item);   //对item减分
+                        double oldScoreByRedis = jedis.zscore(key, item);
+                        if (oldScoreByRedis <= 0) {
+                            oldScoreByRedis = 0;
+                            jedis.zadd(key, oldScoreByRedis, item);    //保证最低减分至为0分
+                        }
 
 //                    jedis.zincrby(key, score, item);
 
-                    //根据此key查找第一的栏目，用来判断是否需要更新时间以及做减分操作
-                    String getRecommandItem = null;
-                    Set sets = jedis.zrevrangeByScore(key, "+inf", "-inf", 0, 2);
-                    Iterator<String> itSets = sets.iterator();
-                    while (itSets.hasNext()) {
-                        String firstItem = itSets.next();
-                        if (!"time".equalsIgnoreCase(firstItem)) {    //用来判断成员是否是time
-                            getRecommandItem = firstItem;
-                            break;
-                        }
-                    }
-
-                    if (item.equalsIgnoreCase(getRecommandItem)) {
-                        String noedays = currentTime();
-                        int getRecommandTime = jedis.zscore(key, "time").intValue();  //double转int
-                        try {
-                            long timeLag = getTimelag(String.valueOf(getRecommandTime), noedays);
-                            if (timeLag >= 2) {
-                                double reduceScores = -timeLag * subScore;  //此处应是负分数
-                                double oldScore = jedis.zscore(key,item);
-                                double newScore = oldScore+reduceScores;
-                                if(newScore<=0){
-                                    newScore =0;
-                                    jedis.zadd(key,newScore,item);    //保证最低减分至为0分
-                                }else {
-                                    jedis.zincrby(key, reduceScores, item);   //对item减分
-                                }
-//                                jedis.zadd(key, Integer.valueOf(noedays), "time");  //重新更新time时间
+                        //根据此key查找第一的栏目，用来判断是否需要更新时间以及做减分操作
+                        String getRecommandItem = null;
+                        Set sets = jedis.zrevrangeByScore(key, "+inf", "-inf", 0, 2);
+                        Iterator<String> itSets = sets.iterator();
+                        while (itSets.hasNext()) {
+                            String firstItem = itSets.next();
+                            if (!"time".equalsIgnoreCase(firstItem)) {    //用来判断成员是否是time
+                                getRecommandItem = firstItem;
+                                break;
                             }
-                        } catch (ParseException e) {
-                            log.error(e.getMessage());         //后期要异常处理
                         }
-                        jedis.zadd(key, Integer.valueOf(noedays), "time");  //只要栏目标签是推荐的，都需要重新更新time时间
-                    }
-                    deleteDb("userid", key);
-                    redisInsert2Db(key);
-                }
 
-                //不存在添加数据
-                if (!jedis.exists(key)) {
-                    Document doc = new Document();
-                    log.info("不能从redis中查到key:" + key);
-                    //从数据库查找是否存在，存在则更新数据库信息，再同步到redis
-                    BasicDBObject searchQuery = new BasicDBObject();
-                    searchQuery.put("userid", key);
-                    doc = coll.find(searchQuery).first();
-                    log.info("从数据库根据userid查到的数据为:" + doc);
-
-                    //数据库中存在
-                    if (!"null".equalsIgnoreCase(String.valueOf(doc))) {
-                        log.info("能从数据库中得到doc");
-                        Document newdoc = new Document();
-                        Double oldScore = Double.valueOf(doc.get(item).toString());
-                        log.info("原始得分为:"+oldScore);
-                        newdoc.put(item, String.valueOf(oldScore + score));    //更新得分
-                        updateById("userid", key, newdoc);
-                        //同步数据到redis
-                        Document document = getDbDoc(key);
-                        dbInsert2Redis(document, key);
-                    }
-
-                    if ("null".equalsIgnoreCase(String.valueOf(doc))) {
-                        log.info("不能从数据库中得到doc");
-                        //添加判断，数据库数据不存在，则添加数据，再同步到数据库
-                        if(score<=0){
-                            score=0.0;
+                        if (item.equalsIgnoreCase(getRecommandItem)) {
+                            String noedays = currentTime();
+                            int getRecommandTime = jedis.zscore(key, "time").intValue();  //double转int
+                            try {
+                                long timeLag = getTimelag(String.valueOf(getRecommandTime), noedays);
+                                if (timeLag >= 2) {
+                                    double reduceScores = -timeLag * subScore;  //此处应是负分数
+                                    double oldScore = jedis.zscore(key, item);
+                                    double newScore = oldScore + reduceScores;
+                                    if (newScore <= 0) {
+                                        newScore = 0;
+                                        jedis.zadd(key, newScore, item);    //保证最低减分至为0分
+                                    } else {
+                                        jedis.zincrby(key, reduceScores, item);   //对item减分
+                                    }
+//                                jedis.zadd(key, Integer.valueOf(noedays), "time");  //重新更新time时间
+                                }
+                            } catch (ParseException e) {
+                                log.error(e.getMessage());         //后期要异常处理
+                            }
+                            jedis.zadd(key, Integer.valueOf(noedays), "time");  //只要栏目标签是推荐的，都需要重新更新time时间
                         }
-                        jedis.zadd(key, score, item);
-                        jedis.zadd(key, Integer.valueOf(currentTime()), "time");     //没有数据则添加第一条记录的时间
+                        deleteDb("userid", key);
                         redisInsert2Db(key);
+                    }
+
+                    //不存在添加数据
+                    if (!jedis.exists(key)) {
+                        Document doc = new Document();
+                        log.info("不能从redis中查到key:" + key);
+                        //从数据库查找是否存在，存在则更新数据库信息，再同步到redis
+                        BasicDBObject searchQuery = new BasicDBObject();
+                        searchQuery.put("userid", key);
+                        doc = coll.find(searchQuery).first();
+                        log.info("从数据库根据userid查到的数据为:" + doc);
+
+                        //数据库中存在
+                        if (!"null".equalsIgnoreCase(String.valueOf(doc))) {
+                            log.info("能从数据库中得到doc");
+                            Document newdoc = new Document();
+                            Double oldScore = Double.valueOf(doc.get(item).toString());
+                            log.info("原始得分为:" + oldScore);
+                            newdoc.put(item, String.valueOf(oldScore + score));    //更新得分
+                            updateById("userid", key, newdoc);
+                            //同步数据到redis
+                            Document document = getDbDoc(key);
+                            dbInsert2Redis(document, key);
+                        }
+
+                        if ("null".equalsIgnoreCase(String.valueOf(doc))) {
+                            log.info("不能从数据库中得到doc");
+                            //添加判断，数据库数据不存在，则添加数据，再同步到数据库
+                            if (score <= 0) {
+                                score = 0.0;
+                            }
+                            jedis.zadd(key, score, item);
+                            jedis.zadd(key, Integer.valueOf(currentTime()), "time");     //没有数据则添加第一条记录的时间
+                            redisInsert2Db(key);
+                        }
                     }
                 }
             }
             // 3. 表示当前线程执行完成
-             log.info("Shutdown Thread:" + this.threadNumber);
-             release(jedis);
+            log.info("Shutdown Thread:" + this.threadNumber);
+            release(jedis);
         }
 
     }

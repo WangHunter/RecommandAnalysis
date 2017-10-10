@@ -7,131 +7,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96d3c089-36b1-40ca-ab5e-f977e2be0c43" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendData/target/classes/com/wonder/data/DataDeal.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendData/target/classes/com/wonder/util/KafkaConsumer$ConsumerKafkaStreamProcesser.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendData/target/classes/com/wonder/util/KafkaConsumer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendData/target/classes/com/wonder/util/ToolUtil.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendData/src/main/resources/client.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendData/target/classes/client.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/service/QueryAllItemByUseridService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/service/impl/QueryAllItemByUseridImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/servlet/QueryItemByUseridServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendSystem/src/test/java/QueryAllItemByUseridServletTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/recommandSystem_war.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/recommandData/src/main/resources/client.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/recommandData/target/classes/client.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/recommandData/target/classes/com/wonder/data/DataDeal.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/recommandData/target/classes/com/wonder/util/KafkaConsumer$ConsumerKafkaStreamProcesser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/recommandData/target/classes/com/wonder/util/KafkaConsumer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/recommandData/target/classes/com/wonder/util/ToolUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/recommandData/target/recommandData-1.0-SNAPSHOT.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/libraries/recommandData_1_0_SNAPSHOT.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/recommandSystem/target/classes/com/wonder/dao/impl/RecommandDataDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/recommandSystem/target/classes/com/wonder/servlet/GetItemIDServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/recommendData/target/recommandData-1.0-SNAPSHOT-bin.tar.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/recommendSystem/target/classes/com/wonder/dao/RecommandDataDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/recommendSystem/target/classes/com/wonder/service/GetRecommandResultService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/recommendSystem/target/classes/com/wonder/service/RecommandDataService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/recommendSystem/target/classes/com/wonder/service/impl/GetRecommandResuleImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/recommendSystem/target/classes/com/wonder/service/impl/RecommandDataServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/recommendSystem/target/recommandSystem-1.0-SNAPSHOT.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/recommendSystem/target/recommandSystem.war" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/recommendSystem/target/test-classes/QueryItemIDServletTest.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/recommandData/target/recommandData-1.0-SNAPSHOT-bin.tar.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/recommandSystem/target/classes/com/wonder/dao/RecommandDataDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/recommandSystem/target/classes/com/wonder/service/GetRecommandResultService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/recommandSystem/target/classes/com/wonder/service/RecommandDataService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/recommandSystem/target/classes/com/wonder/service/impl/GetRecommandResuleImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/recommandSystem/target/classes/com/wonder/service/impl/RecommandDataServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/recommandSystem/target/recommandSystem-1.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/recommandSystem/target/recommandSystem.war" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/recommandSystem/target/test-classes/QueryItemIDServletTest.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommendData/target/classes/com/wonder/util/KafkaConsumer$ConsumerKafkaStreamProcesser.class" afterPath="$PROJECT_DIR$/recommendData/target/classes/com/wonder/util/KafkaConsumer$ConsumerKafkaStreamProcesser.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommendData/target/classes/com/wonder/util/KafkaConsumer.class" afterPath="$PROJECT_DIR$/recommendData/target/classes/com/wonder/util/KafkaConsumer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommendData/target/classes/com/wonder/util/ToolUtil.class" afterPath="$PROJECT_DIR$/recommendData/target/classes/com/wonder/util/ToolUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommendData/target/test-classes/KafkaTools$1.class" afterPath="$PROJECT_DIR$/recommendData/target/test-classes/KafkaTools$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommendData/target/test-classes/KafkaTools.class" afterPath="$PROJECT_DIR$/recommendData/target/test-classes/KafkaTools.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/artifacts/recommandSystem_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/recommendSystem.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/recommandData_1_0_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/libraries/recommandData_1_0_SNAPSHOT.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/RecommandAnalysis.iml" afterPath="$PROJECT_DIR$/RecommendAnalysis.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandData/pom.xml" afterPath="$PROJECT_DIR$/recommendData/pom.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandData/recommandData.iml" afterPath="$PROJECT_DIR$/recommendData/recommendData.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandData/src/main/assembly/assembly.xml" afterPath="$PROJECT_DIR$/recommendData/src/main/assembly/assembly.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandData/src/main/java/com/wonder/data/DataDeal.java" afterPath="$PROJECT_DIR$/recommendData/src/main/java/com/wonder/data/DataDeal.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandData/src/main/java/com/wonder/util/KafkaConsumer.java" afterPath="$PROJECT_DIR$/recommendData/src/main/java/com/wonder/util/KafkaConsumer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandData/src/main/java/com/wonder/util/MongoDBUtil.java" afterPath="$PROJECT_DIR$/recommendData/src/main/java/com/wonder/util/MongoDBUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandData/src/main/java/com/wonder/util/RedisUtil.java" afterPath="$PROJECT_DIR$/recommendData/src/main/java/com/wonder/util/RedisUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandData/src/main/java/com/wonder/util/ResourcesManager.java" afterPath="$PROJECT_DIR$/recommendData/src/main/java/com/wonder/util/ResourcesManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandData/src/main/java/com/wonder/util/ToolUtil.java" afterPath="$PROJECT_DIR$/recommendData/src/main/java/com/wonder/util/ToolUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandData/src/main/resources/log4j2.xml" afterPath="$PROJECT_DIR$/recommendData/target/classes/log4j2.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandData/src/test/java/KafkaProducers.java" afterPath="$PROJECT_DIR$/recommendData/src/test/java/KafkaProducers.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandData/src/test/java/KafkaTools.java" afterPath="$PROJECT_DIR$/recommendData/src/test/java/KafkaTools.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandData/target/classes/com/wonder/util/MongoDBUtil.class" afterPath="$PROJECT_DIR$/recommendData/target/classes/com/wonder/util/MongoDBUtil.class" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandData/target/classes/com/wonder/util/RedisUtil.class" afterPath="$PROJECT_DIR$/recommendData/target/classes/com/wonder/util/RedisUtil.class" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandData/target/classes/com/wonder/util/ResourcesManager.class" afterPath="$PROJECT_DIR$/recommendData/target/classes/com/wonder/util/ResourcesManager.class" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandData/target/classes/log4j2.xml" afterPath="$PROJECT_DIR$/recommendData/src/main/resources/log4j2.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandData/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/recommendData/target/maven-archiver/pom.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandData/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/recommendData/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandData/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/recommendData/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandData/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="$PROJECT_DIR$/recommendData/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandData/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="$PROJECT_DIR$/recommendData/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandData/target/test-classes/KafkaProducers.class" afterPath="$PROJECT_DIR$/recommendData/target/test-classes/KafkaProducers.class" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandData/target/test-classes/KafkaTools$1.class" afterPath="$PROJECT_DIR$/recommendData/target/test-classes/KafkaTools$1.class" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandData/target/test-classes/KafkaTools.class" afterPath="$PROJECT_DIR$/recommendData/target/test-classes/KafkaTools.class" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/artifacts/RecommandSystem_war.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/artifacts/RecommandSystem_war.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/artifacts/RecommandSystem_war_exploded.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/artifacts/RecommandSystem_war_exploded.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/compiler.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/compiler.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/encodings.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/encodings.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_0_1.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_0_1.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/libraries/Maven__junit_junit_4_12.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_38.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_38.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/libraries/Maven__org_springframework_spring_aop_4_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/libraries/Maven__org_springframework_spring_aop_4_2_5_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/libraries/Maven__org_springframework_spring_beans_4_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/libraries/Maven__org_springframework_spring_beans_4_2_5_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/libraries/Maven__org_springframework_spring_context_4_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/libraries/Maven__org_springframework_spring_context_4_2_5_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/libraries/Maven__org_springframework_spring_context_support_4_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/libraries/Maven__org_springframework_spring_context_support_4_2_5_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/libraries/Maven__org_springframework_spring_core_4_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/libraries/Maven__org_springframework_spring_core_4_2_5_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/libraries/Maven__org_springframework_spring_expression_4_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/libraries/Maven__org_springframework_spring_expression_4_2_5_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/libraries/Maven__org_springframework_spring_jdbc_4_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/libraries/Maven__org_springframework_spring_jdbc_4_2_5_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/libraries/Maven__org_springframework_spring_orm_4_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/libraries/Maven__org_springframework_spring_orm_4_2_5_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/libraries/Maven__org_springframework_spring_test_4_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/libraries/Maven__org_springframework_spring_test_4_2_5_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/libraries/Maven__org_springframework_spring_tx_4_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/libraries/Maven__org_springframework_spring_tx_4_2_5_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/libraries/Maven__org_springframework_spring_web_4_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/libraries/Maven__org_springframework_spring_web_4_2_5_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/libraries/Maven__org_springframework_spring_webmvc_4_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/libraries/Maven__org_springframework_spring_webmvc_4_2_5_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/libraries/Maven__org_springframework_spring_webmvc_portlet_4_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/libraries/Maven__org_springframework_spring_webmvc_portlet_4_2_5_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/misc.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/misc.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/modules.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/modules.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/uiDesigner.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/.idea/workspace.xml" afterPath="$PROJECT_DIR$/recommendSystem/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/pom.xml" afterPath="$PROJECT_DIR$/recommendSystem/pom.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/recommandSystem.iml" afterPath="$PROJECT_DIR$/recommendSystem/recommendSystem.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/src/main/java/com/wonder/dao/RecommandDataDao.java" afterPath="$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/dao/RecommendDataDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/src/main/java/com/wonder/dao/impl/RecommandDataDaoImpl.java" afterPath="$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/dao/impl/RecommendDataDaoImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/src/main/java/com/wonder/service/GetRecommandResultService.java" afterPath="$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/service/GetRecommendResultService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/src/main/java/com/wonder/service/RecommandDataService.java" afterPath="$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/service/RecommendDataService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/src/main/java/com/wonder/service/impl/GetRecommandResuleImpl.java" afterPath="$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/service/impl/GetRecommendResuleImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/src/main/java/com/wonder/service/impl/RecommandDataServiceImpl.java" afterPath="$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/service/impl/RecommendDataServiceImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/src/main/java/com/wonder/servlet/GetItemIDServlet.java" afterPath="$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/servlet/GetAllItemIDServlet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/src/main/resources/application.xml" afterPath="$PROJECT_DIR$/recommendSystem/src/main/resources/application.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/src/main/resources/jdbc.properties" afterPath="$PROJECT_DIR$/recommendSystem/src/main/resources/jdbc.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/src/main/resources/log4j2.xml" afterPath="$PROJECT_DIR$/recommendSystem/src/main/resources/log4j2.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/src/main/resources/spring-rpc.xml" afterPath="$PROJECT_DIR$/recommendSystem/src/main/resources/spring-rpc.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/src/main/resources/springmvc-servlet.xml" afterPath="$PROJECT_DIR$/recommendSystem/src/main/resources/springmvc-servlet.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/src/main/webapp/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/recommendSystem/src/main/webapp/META-INF/MANIFEST.MF" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/recommendSystem/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/recommendSystem/src/main/webapp/index.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/src/test/java/QueryItemIDServletTest.java" afterPath="$PROJECT_DIR$/recommendSystem/src/test/java/GetItemIDServletTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/src/test/java/TestProject.java" afterPath="$PROJECT_DIR$/recommendSystem/src/test/java/TestProject.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/src/test/resources/spring-rpc-test.xml" afterPath="$PROJECT_DIR$/recommendSystem/src/test/resources/spring-rpc-test.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/target/classes/application.xml" afterPath="$PROJECT_DIR$/recommendSystem/target/classes/application.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/target/classes/jdbc.properties" afterPath="$PROJECT_DIR$/recommendSystem/target/classes/jdbc.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/target/classes/log4j2.xml" afterPath="$PROJECT_DIR$/recommendSystem/target/classes/log4j2.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/target/classes/spring-rpc.xml" afterPath="$PROJECT_DIR$/recommendSystem/target/classes/spring-rpc.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/target/classes/springmvc-servlet.xml" afterPath="$PROJECT_DIR$/recommendSystem/target/classes/springmvc-servlet.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/recommendSystem/target/maven-archiver/pom.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/recommendSystem/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/recommendSystem/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="$PROJECT_DIR$/recommendSystem/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="$PROJECT_DIR$/recommendSystem/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/target/test-classes/TestProject.class" afterPath="$PROJECT_DIR$/recommendSystem/target/test-classes/TestProject.class" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/recommandSystem/target/test-classes/spring-rpc-test.xml" afterPath="$PROJECT_DIR$/recommendSystem/target/test-classes/spring-rpc-test.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommendData/src/main/java/com/wonder/util/KafkaConsumer.java" afterPath="$PROJECT_DIR$/recommendData/src/main/java/com/wonder/util/KafkaConsumer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommendData/src/main/java/com/wonder/util/ToolUtil.java" afterPath="$PROJECT_DIR$/recommendData/src/main/java/com/wonder/util/ToolUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommendData/src/test/java/KafkaTools.java" afterPath="$PROJECT_DIR$/recommendData/src/test/java/KafkaTools.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommendData/target/classes/client.properties" afterPath="$PROJECT_DIR$/recommendData/target/classes/client.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommendData/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/recommendData/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/dao/impl/RecommendDataDaoImpl.java" afterPath="$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/dao/impl/RecommendDataDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/servlet/GetAllItemIDServlet.java" afterPath="$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/servlet/GetAllItemIDServlet.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/recommendData/target/" />
@@ -150,76 +47,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="QueryItemByUseridServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/servlet/QueryItemByUseridServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1107">
-              <caret line="53" column="31" lean-forward="false" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KafkaConsumer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recommendData/src/main/java/com/wonder/util/KafkaConsumer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="101" column="48" lean-forward="false" selection-start-line="101" selection-start-column="48" selection-end-line="101" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recommendSystem/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="applicationContext-job.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../MyProgram/src/main/resources/applicationContext-job.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="17" column="87" lean-forward="false" selection-start-line="17" selection-start-column="87" selection-end-line="17" selection-end-column="87" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recommendSystem/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5940">
-              <caret line="220" column="17" lean-forward="false" selection-start-line="220" selection-start-column="17" selection-end-line="220" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ToolUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recommendData/src/main/java/com/wonder/util/ToolUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5508">
-              <caret line="230" column="0" lean-forward="false" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="client.properties" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/recommendData/src/main/resources/client.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-324">
-              <caret line="6" column="42" lean-forward="false" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DataDeal.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recommendData/src/main/java/com/wonder/data/DataDeal.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -230,11 +57,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MongoDBUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recommendData/src/main/java/com/wonder/util/MongoDBUtil.java">
+      <file leaf-file-name="KafkaConsumer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommendData/src/main/java/com/wonder/util/KafkaConsumer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2565">
-              <caret line="105" column="70" lean-forward="false" selection-start-line="105" selection-start-column="70" selection-end-line="105" selection-end-column="70" />
+            <state relative-caret-position="-1161">
+              <caret line="135" column="25" lean-forward="true" selection-start-line="135" selection-start-column="25" selection-end-line="135" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QueryAllItemByUseridServletTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommendSystem/src/test/java/QueryAllItemByUseridServletTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="419">
+              <caret line="23" column="69" lean-forward="true" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetItemIDServletTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/recommendSystem/src/test/java/GetItemIDServletTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -243,9 +90,69 @@
       <file leaf-file-name="GetAllItemIDServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/servlet/GetAllItemIDServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+            <state relative-caret-position="972">
+              <caret line="48" column="78" lean-forward="false" selection-start-line="48" selection-start-column="78" selection-end-line="48" selection-end-column="78" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResourcesManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommendData/src/main/java/com/wonder/util/ResourcesManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="999">
+              <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#793#794#0" expanded="false" />
+                <element signature="e#838#839#0" expanded="false" />
+                <element signature="e#1406#1407#0" expanded="false" />
+                <element signature="e#1444#1445#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="assembly.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommendData/src/main/assembly/assembly.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecommendDataService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/service/RecommendDataService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetRecommendResultService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/service/GetRecommendResultService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecommendDataDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/dao/impl/RecommendDataDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="864">
+              <caret line="39" column="31" lean-forward="false" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -284,7 +191,6 @@
         <option value="$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/service/GetAllItemByUserid.java" />
         <option value="$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/service/impl/GetAllItemByUseridImpl.java" />
         <option value="$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/service/QueryAllItemByUseridService.java" />
-        <option value="$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/dao/impl/RecommendDataDaoImpl.java" />
         <option value="$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/dao/RecommendDataDao.java" />
         <option value="$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/service/impl/QueryAllItemByUseridImpl.java" />
         <option value="$PROJECT_DIR$/recommendSystem/src/test/java/GetItemIDServletTest.java" />
@@ -293,11 +199,14 @@
         <option value="$PROJECT_DIR$/recommendSystem/src/main/resources/applicationContext-job.xml" />
         <option value="$PROJECT_DIR$/recommendSystem/pom.xml" />
         <option value="$PROJECT_DIR$/recommendSystem/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/recommendData/src/main/java/com/wonder/util/ToolUtil.java" />
         <option value="$PROJECT_DIR$/recommendData/src/main/java/com/wonder/util/MongoDBUtil.java" />
+        <option value="$PROJECT_DIR$/recommendData/src/main/resources/client.properties" />
+        <option value="$PROJECT_DIR$/recommendData/src/test/java/KafkaTools.java" />
+        <option value="$PROJECT_DIR$/recommendData/src/main/java/com/wonder/util/ToolUtil.java" />
+        <option value="$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/servlet/GetAllItemIDServlet.java" />
+        <option value="$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/dao/impl/RecommendDataDaoImpl.java" />
         <option value="$PROJECT_DIR$/recommendData/src/main/java/com/wonder/data/DataDeal.java" />
         <option value="$PROJECT_DIR$/recommendData/src/main/java/com/wonder/util/KafkaConsumer.java" />
-        <option value="$PROJECT_DIR$/recommendData/src/main/resources/client.properties" />
       </list>
     </option>
   </component>
@@ -358,6 +267,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -368,6 +278,86 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="RecommendAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecommendAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecommendAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="recommendSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecommendAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecommendAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="recommendSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecommendAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecommendAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="recommendSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecommendAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecommendAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="recommendSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -442,10 +432,6 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -515,31 +501,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecommendAnalysis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecommendAnalysis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recommendData" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1273,12 +1236,21 @@
       <workItem from="1506564377833" duration="10899000" />
       <workItem from="1506646010659" duration="8882000" />
       <workItem from="1506734556885" duration="6554000" />
-      <workItem from="1507510165647" duration="1184000" />
+      <workItem from="1507510165647" duration="6422000" />
+      <workItem from="1507597434550" duration="6595000" />
     </task>
+    <task id="LOCAL-00001" summary="10-09项目名称修改，增加了不感兴趣的减分到负分的处理">
+      <created>1507511790730</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1507511790730</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27519000" />
+    <option name="totallyTimeSpent" value="39352000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="0" width="1918" height="1040" extended-state="0" />
@@ -1288,7 +1260,7 @@
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13347685" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13347685" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1303,10 +1275,10 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24476296" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24476296" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17438105" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21689989" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1325,6 +1297,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="10-09项目名称修改，增加了不感兴趣的减分到负分的处理" />
+    <option name="LAST_COMMIT_MESSAGE" value="10-09项目名称修改，增加了不感兴趣的减分到负分的处理" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
@@ -1334,14 +1310,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/servlet/QueryItemByUseridServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1107">
-          <caret line="53" column="31" lean-forward="false" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/recommendData/src/main/java/com/wonder/util/KafkaConsumer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4563">
@@ -1378,7 +1346,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5508">
           <caret line="230" column="0" lean-forward="true" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1386,7 +1356,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1053">
           <caret line="39" column="26" lean-forward="false" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1402,7 +1371,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2565">
           <caret line="105" column="70" lean-forward="false" selection-start-line="105" selection-start-column="70" selection-end-line="105" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1410,7 +1378,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1418,7 +1388,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1431">
           <caret line="53" column="31" lean-forward="true" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1442,7 +1411,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4563">
           <caret line="195" column="29" lean-forward="false" selection-start-line="195" selection-start-column="29" selection-end-line="195" selection-end-column="29" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1450,7 +1421,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1377">
           <caret line="51" column="26" lean-forward="true" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1458,6 +1428,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="20" column="69" lean-forward="true" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="69" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1465,6 +1436,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1472,6 +1444,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="32" column="6" lean-forward="false" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1479,6 +1452,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1080">
           <caret line="47" column="25" lean-forward="false" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1486,7 +1462,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1510,7 +1488,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4563">
           <caret line="194" column="30" lean-forward="false" selection-start-line="194" selection-start-column="30" selection-end-line="194" selection-end-column="30" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1525,7 +1505,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1242">
           <caret line="46" column="36" lean-forward="true" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1550,20 +1529,6 @@
         <state relative-caret-position="3132">
           <caret line="116" column="48" lean-forward="false" selection-start-line="116" selection-start-column="48" selection-end-line="116" selection-end-column="48" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendData/src/test/java/KafkaProducers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="15" column="45" lean-forward="false" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/service/GetRecommendResultService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1595,47 +1560,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/recommendSystem/src/test/java/QueryForMysqlServletTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="32" column="6" lean-forward="false" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendSystem/src/test/java/GetItemIDServletTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="20" column="69" lean-forward="false" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendSystem/src/test/java/QueryAllItemByUseridServletTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="17" column="41" lean-forward="false" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/dao/impl/RecommendDataDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="47" column="25" lean-forward="false" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/servlet/GetAllItemIDServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/servlet/QueryItemByUseridServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1107">
           <caret line="53" column="31" lean-forward="false" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1663,19 +1591,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/recommendData/src/main/java/com/wonder/util/ToolUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5508">
-          <caret line="230" column="0" lean-forward="false" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/recommendData/src/main/java/com/wonder/util/MongoDBUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2565">
           <caret line="105" column="70" lean-forward="false" selection-start-line="105" selection-start-column="70" selection-end-line="105" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendData/src/main/resources/client.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="42" lean-forward="false" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendSystem/src/test/java/QueryForMysqlServletTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-405">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendData/src/test/java/KafkaProducers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="15" column="45" lean-forward="false" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendData/src/test/java/KafkaTools.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1485">
+          <caret line="62" column="56" lean-forward="false" selection-start-line="62" selection-start-column="56" selection-end-line="62" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1468#1469#0" expanded="false" />
+            <element signature="e#1507#1508#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendData/src/main/java/com/wonder/util/ToolUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5211">
+          <caret line="218" column="12" lean-forward="false" selection-start-line="218" selection-start-column="12" selection-end-line="218" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/servlet/GetAllItemIDServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="972">
+          <caret line="48" column="78" lean-forward="false" selection-start-line="48" selection-start-column="78" selection-end-line="48" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendData/src/main/java/com/wonder/util/ResourcesManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="999">
+          <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#793#794#0" expanded="false" />
+            <element signature="e#838#839#0" expanded="false" />
+            <element signature="e#1406#1407#0" expanded="false" />
+            <element signature="e#1444#1445#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendData/src/main/assembly/assembly.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/service/RecommendDataService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/service/GetRecommendResultService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendSystem/src/main/java/com/wonder/dao/impl/RecommendDataDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="39" column="31" lean-forward="false" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1689,16 +1711,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/recommendData/src/main/java/com/wonder/util/KafkaConsumer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="101" column="48" lean-forward="false" selection-start-line="101" selection-start-column="48" selection-end-line="101" selection-end-column="48" />
+        <state relative-caret-position="-1161">
+          <caret line="135" column="25" lean-forward="true" selection-start-line="135" selection-start-column="25" selection-end-line="135" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/recommendData/src/main/resources/client.properties">
+    <entry file="file://$PROJECT_DIR$/recommendSystem/src/test/java/QueryAllItemByUseridServletTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-324">
-          <caret line="6" column="42" lean-forward="false" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+        <state relative-caret-position="419">
+          <caret line="23" column="69" lean-forward="true" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendSystem/src/test/java/GetItemIDServletTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
           <folding />
         </state>
       </provider>

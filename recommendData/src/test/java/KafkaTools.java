@@ -1,4 +1,5 @@
 import com.wonder.util.ResourcesManager;
+import kafka.utils.Utils;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
 
@@ -58,7 +59,8 @@ public class KafkaTools {
     }
 
     public static void main(String[] args) {
-        System.out.println(getKafka());
+        String key = "2001731";
+        System.out.println(Utils.abs(key.hashCode()%3));
     }
 
 }

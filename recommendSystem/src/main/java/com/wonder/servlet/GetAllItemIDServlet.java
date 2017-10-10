@@ -46,7 +46,7 @@ public class GetAllItemIDServlet extends HttpServlet {
         log.info("根据用户id来获取推荐标签,用户id为"+getUserid);
         try {
             String getItemID = getRecommendResultService.getItemByUserID(getUserid);
-            response.setHeader("Content-type", "text/html;charset=UTF-8");  //让用utf8来解析返回的数据
+            response.setHeader("Content-type", "text/html;charset=UTF-8");  //用utf8来解析返回的数据
             PrintWriter out = response.getWriter();
             out.println(getItemID);
             out.flush();
