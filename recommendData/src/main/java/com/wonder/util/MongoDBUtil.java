@@ -18,11 +18,6 @@ import org.bson.types.ObjectId;
  * 设计为单例模式， 因 MongoDB的Java驱动是线程安全的，对于一般的应用，只要一个Mongo实例即可，<br>
  * Mongo有个内置的连接池（默认为10个） 对于有大量写和读的环境中，为了确保在一个Session中使用同一个DB时，<br>
  * DB和DBCollection是绝对线程安全的<br>
- *
- * @author zhoulingfei
- * @date 2015-5-29 上午11:49:49
- * @version 0.0.0
- * @Copyright (c)1997-2015 NavInfo Co.Ltd. All Rights Reserved.
  */
 public enum MongoDBUtil {
 
@@ -166,60 +161,6 @@ public enum MongoDBUtil {
             mongoClient.close();
             mongoClient = null;
         }
-    }
-
-    /**
-     * 测试入口
-     *
-     * @param args
-     */
-    public static void main(String[] args) {
-
-        String dbName = ResourcesManager.getProp("mongodb.db");
-        String collName = ResourcesManager.getProp("mongodb.coll");
-        MongoCollection<Document> coll = MongoDBUtil.instance.getCollection(dbName, collName);
-
-        // 插入多条
-//         for (int i = 1; i <= 4; i++) {
-//         Document doc = new Document();
-//         doc.put("_id", i);
-//         doc.put("school", "NEFU" + i);
-//         Document interests = new Document();
-//         interests.put("game", "game" + i);
-//         interests.put("ball", "ball" + i);
-//         doc.put("interests", interests);
-//         coll.insertOne(doc);
-//         }
-
-        // // 根据ID查询
-//         String id = "1";
-//         Document doc = MongoDBUtil.instance.findById(coll, id);
-//         System.out.println(doc);
-
-        // 查询多个
-        // MongoCursor<Document> cursor1 = coll.find(Filters.eq("name", "zhoulf")).iterator();
-        // while (cursor1.hasNext()) {
-        // org.bson.Document _doc = (Document) cursor1.next();
-        // System.out.println(_doc.toString());
-        // }
-        // cursor1.close();
-
-        // 查询多个
-        // MongoCursor<Person> cursor2 = coll.find(Person.class).iterator();
-
-        // 修改数据
-//         String id = "1";
-//         Document newdoc = new Document();
-//         newdoc.put("school", "HPU");
-//         MongoDBUtil.instance.updateById(coll, id, newdoc);
-
-        // 统计表
-        // System.out.println(MongoDBUtil.instance.getCount(coll));
-
-        // 查询所有
-//        Bson filter = Filters.eq("count", 0);
-//        MongoDBUtil.instance.find(coll, filter);
-
     }
 
 }

@@ -69,8 +69,5 @@ public class RedisUtil {
     public static void returnBrokenResource(Jedis jedis){
         jedisPool.returnBrokenResource(jedis);
     }
-    public static void main(String[] args) {
-        System.out.println(getJedis());
-    }
 }
 
