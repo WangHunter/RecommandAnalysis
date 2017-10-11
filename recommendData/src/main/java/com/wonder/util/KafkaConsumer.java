@@ -30,7 +30,6 @@ import static com.wonder.util.ToolUtil.*;
 
 /**
  * 自定义简单Kafka消费者， 使用高级API
- * Created by gerry on 12/21.
  */
 public class KafkaConsumer implements Runnable {
     private static final Logger log = org.apache.logging.log4j.LogManager.getLogger(KafkaConsumer.class.getName());
@@ -154,7 +153,6 @@ public class KafkaConsumer implements Runnable {
                         }
                     }
                 } catch (Exception e) {
-                    e.printStackTrace();
                     log.error(e.getMessage());
                     continue;
                 }
@@ -170,7 +168,7 @@ public class KafkaConsumer implements Runnable {
                         jedis.zincrby(key, score, item);   //对item减分
                         double oldScoreByRedis = jedis.zscore(key, item);
                         if (oldScoreByRedis <= 0) {
-                            oldScoreByRedis = 0;
+                            oldScoreByRedis = 0.0;
                             jedis.zadd(key, oldScoreByRedis, item);    //保证最低减分至为0分
                         }
 
@@ -276,7 +274,7 @@ public class KafkaConsumer implements Runnable {
                     System.out.println("Timed out waiting for consumer threads to shut down, exiting uncleanly!!");
                 }
             } catch (InterruptedException e) {
-                log.error(e.getStackTrace());
+                log.error(e.getMessage());
             }
         }
     }
