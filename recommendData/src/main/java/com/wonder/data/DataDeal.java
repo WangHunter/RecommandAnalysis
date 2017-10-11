@@ -20,7 +20,7 @@ public class DataDeal {
         log.info("开始消费数据");
         KafkaConsumer kafkaConsumer = new KafkaConsumer(topic,threads,zookeeper,groupId);
         new Thread(kafkaConsumer).start();
-        Thread.sleep(30*60*1000);  //32分钟后结束
+        Thread.sleep(30*60*1000);  //30分钟后结束
         kafkaConsumer.shutdown();
 
     }
