@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96d3c089-36b1-40ca-ab5e-f977e2be0c43" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendData/recommandData.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -60,8 +59,8 @@
       <file leaf-file-name="GetItemIDServletTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/recommendSystem/src/test/java/GetItemIDServletTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+            <state relative-caret-position="621">
+              <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -1217,7 +1216,7 @@
       <workItem from="1506646010659" duration="8882000" />
       <workItem from="1506734556885" duration="6554000" />
       <workItem from="1507510165647" duration="6422000" />
-      <workItem from="1507597434550" duration="7681000" />
+      <workItem from="1507597434550" duration="7711000" />
     </task>
     <task id="LOCAL-00001" summary="10-09项目名称修改，增加了不感兴趣的减分到负分的处理">
       <created>1507511790730</created>
@@ -1233,11 +1232,18 @@
       <option name="project" value="LOCAL" />
       <updated>1507629356159</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="增加多个标签逗号分割计算得分">
+      <created>1507683873985</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1507683873985</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40438000" />
+    <option name="totallyTimeSpent" value="40468000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="0" width="1918" height="1040" extended-state="0" />
@@ -1717,8 +1723,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/recommendSystem/src/test/java/GetItemIDServletTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+        <state relative-caret-position="621">
+          <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
           <folding />
         </state>
       </provider>
