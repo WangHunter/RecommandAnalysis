@@ -1,5 +1,6 @@
 package com.wonder.util;
 
+import org.apache.logging.log4j.Logger;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
@@ -8,6 +9,8 @@ import redis.clients.jedis.JedisPoolConfig;
  * Created by Administrator on 2017/8/15.
  */
 public class RedisUtil {
+    private static final Logger log = org.apache.logging.log4j.LogManager.getLogger(RedisUtil.class.getName());
+
     public static JedisPool jedisPool;
     // Redis服务器IP
     private static String ADDR = ResourcesManager.getProp("redis.cluster.address");
@@ -27,7 +30,7 @@ public class RedisUtil {
             // 是否启用pool的jmx管理功能, 默认true
             config.setJmxEnabled(true);
             // 最大空闲连接数, 默认8个 控制一个pool最多有多少个状态为idle(空闲的)的jedis实例。
-            config.setMaxIdle(8);
+            config.setMaxIdle(20);
             // 最大连接数, 默认8个
             config.setMaxTotal(200);
             // 表示当borrow(引入)一个jedis实例时，最大的等待时间，如果超过等待时间，则直接抛出JedisConnectionException；
@@ -36,21 +39,18 @@ public class RedisUtil {
             config.setTestOnBorrow(true);
             jedisPool = new JedisPool(config, ADDR, PORT, 4000);
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error(e.getMessage(),e);
         }
     }
+
     /**
      * 获取Jedis实例
      *
      * @return
      */
     public static Jedis getJedis() {
-            if (jedisPool != null) {
-                Jedis resource = jedisPool.getResource();
-                return resource;
-            } else {
-                return jedisPool.getResource();
-            }
+        Jedis resource = jedisPool.getResource();
+        return resource;
     }
 
     /**
@@ -58,16 +58,14 @@ public class RedisUtil {
      *
      * @param jedis
      */
-    public static void release(final Jedis jedis) {
-        if (jedis != null) {
+    public static void releaseRedis(final Jedis jedis) {
             jedisPool.returnResource(jedis);
-        }
     }
 
 
-
-    public static void returnBrokenResource(Jedis jedis){
-        jedisPool.returnBrokenResource(jedis);
+    public static void returnBrokenResource(Jedis jedis) {
+            log.info("错误，释放redis连接");
+            jedisPool.returnBrokenResource(jedis);
     }
 }
 

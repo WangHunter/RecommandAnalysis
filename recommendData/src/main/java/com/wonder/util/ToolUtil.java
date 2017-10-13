@@ -25,7 +25,8 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.Set;
 
-import static com.wonder.util.RedisUtil.*;
+import static com.wonder.util.RedisUtil.getJedis;
+import static com.wonder.util.RedisUtil.releaseRedis;
 
 /**
  * Created by Administrator on 2017/9/12.
@@ -65,7 +66,7 @@ public class ToolUtil {
         }
         docInsert.put("userid", key);
         coll.insertOne(docInsert);
-        release(jedis);
+        releaseRedis(jedis);
 //        jedis.close();
     }
 
@@ -128,10 +129,10 @@ public class ToolUtil {
                     jedis.zadd(key, Double.valueOf(valueJson), keyJson);
                 }
             }
-            release(jedis);
+            releaseRedis(jedis);
         } catch (JSONException e) {
-            returnBrokenResource(jedis);
-            log.error(e.getMessage());
+//            redisUtil.returnBrokenResource(jedis);
+            log.error(e.getMessage(),e);
         }
     }
 
@@ -178,7 +179,7 @@ public class ToolUtil {
                 break;
             }
         }
-        release(jedis);
+        releaseRedis(jedis);
 //        jedis.close();
 //        close(jedis);
         return getRecommandItem;

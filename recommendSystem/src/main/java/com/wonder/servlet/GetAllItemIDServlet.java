@@ -43,7 +43,6 @@ public class GetAllItemIDServlet extends HttpServlet {
                           HttpServletResponse response) throws ServletException, IOException {
         new ArrayList<String>();
         String getUserid = request.getParameter("userid");
-        log.info("根据用户id来获取推荐标签,用户id为"+getUserid);
         try {
             String getItemID = getRecommendResultService.getItemByUserID(getUserid);
             response.setHeader("Content-type", "text/html;charset=UTF-8");  //用utf8来解析返回的数据

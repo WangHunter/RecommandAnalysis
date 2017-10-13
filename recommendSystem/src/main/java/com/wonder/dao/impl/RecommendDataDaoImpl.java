@@ -5,9 +5,7 @@ import org.bson.Document;
 import org.json.JSONException;
 import org.springframework.stereotype.Service;
 
-import static com.wonder.util.ToolUtil.dbInsert2Redis;
-import static com.wonder.util.ToolUtil.getDbDoc;
-import static com.wonder.util.ToolUtil.getRecommandItem;
+import static com.wonder.util.ToolUtil.*;
 
 
 /**
@@ -26,6 +24,7 @@ public class RecommendDataDaoImpl implements RecommendDataDao {
 
 
     public String resultItem(String userid) throws JSONException {
+        log.info("根据用户id来获取推荐标签,用户id为"+userid);
         String getItem = null;  //配置默认返回结果，从redis和数据库都得不到结果
         getItem = getRecommandItem(userid);   //先从redis中拿最高得分的栏目，如果没有则从db中得到
         //如果从redis中得不到则从数据库中得到数据
