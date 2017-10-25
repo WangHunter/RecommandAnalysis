@@ -21,8 +21,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-import static com.wonder.util.RedisUtil.getJedis;
-import static com.wonder.util.RedisUtil.releaseRedis;
 import static com.wonder.util.RedisUtil.returnBrokenResource;
 import static com.wonder.util.ToolUtil.*;
 
@@ -125,7 +123,7 @@ public class KafkaConsumer implements Runnable {
         public void run() {
             log.info("准备读取kafka数据");
 
-            Jedis jedis = getJedis();
+            Jedis jedis = RedisUtil.getJedis();
             ConsumerIterator<String, String> iter = this.stream.iterator();
             while (iter.hasNext()) {
                 // 2.1 获取数据值
@@ -156,7 +154,7 @@ public class KafkaConsumer implements Runnable {
                         }
                     }
                 } catch (Exception e) {
-                    log.error(e.getMessage(),e);
+                    log.error(e.getMessage(), e);
                     continue;
                 }
                 log.info("用户的相关信息:" + key + "," + item + "," + score);
@@ -208,7 +206,7 @@ public class KafkaConsumer implements Runnable {
                                 }
                             } catch (ParseException e) {
                                 returnBrokenResource(jedis);
-                                log.error(e.getMessage(),e);         //后期要异常处理
+                                log.error(e.getMessage(), e);         //后期要异常处理
                             }
                             jedis.zadd(key, Integer.valueOf(noedays), "time");  //只要栏目标签是推荐的，都需要重新更新time时间
                         }
@@ -254,7 +252,7 @@ public class KafkaConsumer implements Runnable {
             }
             // 3. 表示当前线程执行完成
             log.info("结束定时任务");
-            releaseRedis(jedis);
+            RedisUtil.releaseRedis(jedis);
             log.info("Shutdown Thread:" + this.threadNumber);
 
         }
@@ -280,7 +278,7 @@ public class KafkaConsumer implements Runnable {
                     System.out.println("Timed out waiting for consumer threads to shut down, exiting uncleanly!!");
                 }
             } catch (InterruptedException e) {
-                log.error(e.getMessage(),e);
+                log.error(e.getMessage(), e);
             }
         }
     }
