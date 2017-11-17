@@ -21,6 +21,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+import static com.wonder.util.RedisUtil.getJedis;
+import static com.wonder.util.RedisUtil.releaseRedis;
 import static com.wonder.util.RedisUtil.returnBrokenResource;
 import static com.wonder.util.ToolUtil.*;
 
@@ -122,8 +124,7 @@ public class KafkaConsumer implements Runnable {
 
         public void run() {
             log.info("准备读取kafka数据");
-
-            Jedis jedis = RedisUtil.getJedis();
+            Jedis jedis = getJedis();
             ConsumerIterator<String, String> iter = this.stream.iterator();
             while (iter.hasNext()) {
                 // 2.1 获取数据值
@@ -252,11 +253,9 @@ public class KafkaConsumer implements Runnable {
             }
             // 3. 表示当前线程执行完成
             log.info("结束定时任务");
-            RedisUtil.releaseRedis(jedis);
+            releaseRedis(jedis);
             log.info("Shutdown Thread:" + this.threadNumber);
-
         }
-
     }
 
 
@@ -275,7 +274,7 @@ public class KafkaConsumer implements Runnable {
             // 2.2. 等待关闭完成, 等待五秒
             try {
                 if (!this.executorPool.awaitTermination(5, TimeUnit.SECONDS)) {
-                    System.out.println("Timed out waiting for consumer threads to shut down, exiting uncleanly!!");
+                    log.info("Timed out waiting for consumer threads to shut down, exiting uncleanly!!");
                 }
             } catch (InterruptedException e) {
                 log.error(e.getMessage(), e);

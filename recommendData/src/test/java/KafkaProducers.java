@@ -21,7 +21,7 @@ public class KafkaProducers {
 
     public static void main(String[] args) {
         for(int i=0;i<1;i++){
-            String str = "{\"actionType\":\"02\",\"contentId\":\"23544450\",\"newsTag\":\"itemTest\",\"nodeId\":\"263910\",\"userId\":\"000010"+i+"\"}";
+            String str = "{\"actionType\":\"2\",\"contentId\":\"6869122\",\"newsTag\":\"ceshi\",\"nodeId\":\"26401\",\"userId\":\"2001731\"}";
 //            String str = "{\"actionType\":\"02\",\"contentId\":\"23544450\",\"newsTag\":\"\",\"nodeId\":\"263910\",\"userId\":\"000000\"}";
             sendMsg(str);
             System.out.println(str);

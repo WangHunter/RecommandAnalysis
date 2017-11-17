@@ -58,7 +58,7 @@ public class RedisUtil {
      *
      * @param jedis
      */
-    public static void releaseRedis(final Jedis jedis) {
+    public static void releaseRedis(Jedis jedis) {
             jedisPool.returnResource(jedis);
     }
 
