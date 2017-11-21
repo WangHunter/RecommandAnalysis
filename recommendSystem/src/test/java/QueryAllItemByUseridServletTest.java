@@ -16,7 +16,7 @@ public class QueryAllItemByUseridServletTest {
 
         CloseableHttpClient client = HttpClients.createDefault();
         HttpPost httpPost = new HttpPost(
-                "http://localhost:8080/recommendSystem/queryItemId?userid=2001718");
+                "http://200.200.6.73:8180/recommendSystem/queryItemId?userid=2001718");
         httpPost.setHeader("Accept", "application/json");
         httpPost.setHeader("Content-type", "application/json");
 
