@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.wonder</groupId>
   <artifactId>recommendSystem</artifactId>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
   <!--<packaging>pom</packaging>-->
   <version>1.0-SNAPSHOT</version>
   <name>recommendSystem</name>
@@ -224,7 +224,8 @@
 
 
   <build>
-    <defaultGoal>install</defaultGoal>
+      <finalName>recommendSystem</finalName>
+      <defaultGoal>install</defaultGoal>
     <pluginManagement>
       <plugins>
         <plugin>
@@ -236,6 +237,12 @@
             <target>1.7</target>
           </configuration>
         </plugin>
+
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-war-plugin</artifactId>
+              <version>3.2.0</version>
+          </plugin>
 
         <!--跳过测试代码-->
         <plugin>

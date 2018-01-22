@@ -20,10 +20,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
 
 import static com.wonder.util.RedisUtil.getJedis;
 import static com.wonder.util.RedisUtil.releaseRedis;
@@ -170,15 +167,39 @@ public class ToolUtil {
     public static String getRecommandItem(String key) {
         Jedis jedis = getJedis();
         String getRecommandItem = null;
-        Set sets = jedis.zrevrangeByScore(key, "+inf", "-inf", 0, 2);
+        List list =new ArrayList<>();
+        Set sets = jedis.zrevrangeByScore(key, "+inf", "-inf", 0, 4);   //考虑到有time字段
         Iterator<String> itSets = sets.iterator();
         while (itSets.hasNext()) {
             String firstItem = itSets.next();
-            if (!"time".equalsIgnoreCase(firstItem)) {    //用来判断成员是否是time
-                getRecommandItem = firstItem;
-                break;
+            list.add(firstItem);
+
+            /*if (!"time".equalsIgnoreCase(firstItem)) {    //用来判断成员是否是time
+                getRecommandItem = getRecommandItem + "," + firstItem;
+//                break;
+            }*/
+        }
+        list.remove("time");
+
+        if(list.size()>3){
+            for(int i=0;i<=3;i++){
+                if("null".equalsIgnoreCase(getRecommandItem) || null==getRecommandItem){
+                    getRecommandItem = list.get(i).toString();
+                }else {
+                    getRecommandItem = getRecommandItem + "," + list.get(i).toString();
+                }
             }
         }
+        if(list.size()<=3) {
+            for (int i = 0; i <list.size(); i++) {
+                if("null".equalsIgnoreCase(getRecommandItem) || null==getRecommandItem){
+                    getRecommandItem = list.get(i).toString();
+                }else {
+                    getRecommandItem = getRecommandItem + "," + list.get(i).toString();
+                }
+            }
+        }
+        System.out.println(list.toString());
         releaseRedis(jedis);
 //        jedis.close();
 //        close(jedis);
